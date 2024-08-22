@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Online Grocery</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <!-- Login Strings -->
+    <string name="login">LOGIN</string>
+    <string name="login_mobile_hint">Enter Mobile Number</string>
+    <string name="login_password_hint">Enter Password</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <!-- Register Strings -->
+    <string name="register">FREE REGISTER</string>
+    <string name="register_name_hint">Enter Name</string>
+    <string name="register_mobile_hint">Enter Mobile Number</string>
+    <string name="register_password_hint">Enter Password</string>
+    <string name="register_address_hint">Enter Address</string>
+    <string name="register_login_hint">Already have an account? Login</string>
+    <string-array name="category_items">
+        <item>Team Leader</item>
+        <item>Team Member</item>
+    </string-array>
+
+
+    <string-array name="spinner_items">
+        <item>UPI</item>
+        <item>Cash</item>
+    </string-array>
+
+    <array name="feedback_type_options">
+        <item>Feebback</item>
+        <item>Inquery</item>
+        <item>Suggetion</item>
+    </array>
+
+
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="submit">Submit</string>
+    <string name="enter_password">Enter Password</string>
+
+    <string name="eventDescription">The event usually begins with a warm welcome to the freshers. Seniors or
+        organizers may give an introduction to the purpose of the event and express excitement about having
+        the new students on board.</string>
+    <string name="moot_court_description">Theme/Case: Introduce the hypothetical case or legal problem that participants will argue. Rules and Guidelines: Highlight competition rules, scoring criteria, team composition, and rounds. Important Dates: Include deadlines for registration, submission of briefs, and the competition date.</string>
+    <string name="moot_court_content2">Eligibility: Specify who can participate (law students, specific levels, etc.). Registration Process: Explain how teams can register, fees (if any), and required documents. Training/Resources: Offer guidance or resources for participants—research materials, workshops, practice sessions, etc</string>
+    <string name="internet_query">Please check your internet connection and retry</string>
+    <string name="todo">TODO</string>
+
+    <string name="address"> Khandwa (M.P.) - 450001</string>
+
+    <string name="mobile">9826607332</string>
+
+    <string name="email">madss@gmail.com</string>
+    <string name="timeing">9:00 AM TO 5:00 PM</string>
+    <string name="online_directory">Online Directory</string>
+    <string name="Point1">Real-time vehicle tracking for precise monitoring.</string>
+    <string name="Point2">Proactive maintenance scheduling to reduce breakdowns.</string>
+    <string name="Point3">Real-time vehicle tracking for precise monitoring.</string>
+    <string name="Point4">Real-time vehicle tracking for precise monitoring.</string>
+    <string name="pageNotFoundText">Sorry, the page you\'re looking for doesn\'t exist.If you think something is broken report a problem</string>
+    <string name="pageNotFound">OOPS! Page Not Found</string>
+    <string name="myKhandwa"><![CDATA[My Khandwa is a Software Development Company and Training Center based in Indore. Our services include Website Design, Web Application Development, Software Development, Mobile Application Development, Web hosting, IT Consultancy and Software Testing & SEO. We also specialize in Android Application Development. Our Vision is to help our Clients Develop Solution to streamline operations, increase revenues, maximize performance and grow as trusted technology partner to our clients. Our team is young, passionate and highly competitive who is ready to devote what it takes. We fill the time gap by working hard and overlapping our client working hours. Before we expose our team member to our customer, we ensure that they are trained, have first hand exposure to different tools and software development practices.]]></string>
+
+</resources>

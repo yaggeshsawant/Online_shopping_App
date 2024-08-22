@@ -1,0 +1,82 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ExtraText">
+
+    <group android:id="@+id/menu_group_top_id">
+
+        <item
+            android:id="@+id/nav_home_id"
+            android:icon="@drawable/home"
+            android:iconTint="@color/primary_clr"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/Pending_order_id"
+            android:icon="@drawable/feedback"
+            android:title="Pending Order"
+            android:iconTint="@color/primary_clr"
+            />
+
+        <item
+            android:id="@+id/Complete_order_id"
+            android:icon="@drawable/feedback"
+            android:title="Complete Order"
+            android:iconTint="@color/primary_clr"
+            />
+
+
+
+
+
+    </group>
+    <group android:id="@+id/menu_group_bottom_id">
+        <item
+            android:id="@+id/nav_about_id"
+            android:icon="@drawable/ic_about_us"
+            android:iconTint="@color/primary_clr"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_contact_id"
+            android:icon="@drawable/message"
+            android:iconTint="@color/primary_clr"
+            android:title="Contact" />
+
+        <item
+            android:id="@+id/nav_feedback_id"
+            android:icon="@drawable/feedback"
+            android:iconTint="@color/primary_clr"
+            android:title="Feedback" />
+
+
+
+
+
+
+
+    </group>
+    <group>
+        <item
+            android:id="@+id/nav_login_id"
+            android:icon="@drawable/feedback"
+            android:iconTint="@color/primary_clr"
+            android:title="Login" />
+        <item
+            android:id="@+id/nav_logout_id"
+            android:icon="@drawable/feedback"
+            android:iconTint="@color/primary_clr"
+            android:title="Logout" />
+
+
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/nav_tc"
+            android:icon="@drawable/feedback"
+            android:iconTint="@color/primary_clr"
+            android:title="Terms and Condition"
+            />
+    </group>
+</menu>
+
+

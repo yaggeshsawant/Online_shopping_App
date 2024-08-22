@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!-- custom_dialog_layout.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="3dp"
+    android:background="@color/black"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="8dp"
+        android:radius="16dp">
+
+        <ImageView
+            android:id="@+id/dialogImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+
+            android:layout_margin="15dp"
+
+            android:src="@drawable/feedback_img" />
+
+        <!-- Close icon in the top right corner -->
+        <ImageView
+            android:id="@+id/closeIcon"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/cross_icn" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

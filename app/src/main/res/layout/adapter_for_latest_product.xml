@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="175dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#4DE6E4E4"
+        tools:ignore="UseCompoundDrawables">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/imgId"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/main_bg"
+                android:src="@drawable/no_img" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_margin="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewDiscountBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/discount_badge"
+                    android:padding="4dp"
+                    android:text="50% OFF"
+                    android:textSize="12sp" />
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/nameId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="yaggesh sawant"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:gravity="center_horizontal">
+
+
+            <TextView
+                android:id="@+id/priceId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="\u20B9 18,999"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/crossPriceId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:alpha="0.6"
+                android:background="@drawable/price_cross_design"
+                android:gravity="center"
+                android:text="&#8377;21,000"
+                android:textColor="@color/dark_gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!--  <me.zhanghai.android.materialratingbar.MaterialRatingBar
+              android:id="@+id/ratingBar"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:rating="0"
+              app:rb_numStars="5"
+              app:rb_starPadding="8dp"
+              app:rb_starSize="16dp" /> &lt;!&ndash; Reduced star size to 16dp &ndash;&gt;
+  -->
+     <!--   <LinearLayout
+            android:id="@+id/count_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <ImageButton
+                android:id="@+id/btndecrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/submit_btn_bg"
+                android:baselineAligned="false"
+                android:contentDescription="decrement"
+                android:onClick="decrementCount"
+                android:src="@drawable/ic_desh"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="0"
+                android:textColor="@color/primary_clr"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/btnincrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/submit_btn_bg"
+                android:contentDescription="increment"
+                android:onClick="incrementCount"
+                android:src="@drawable/ic_plus"
+                app:tint="@color/black" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addToCartbtnId"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/login_button_bk"
+            android:text="Add To Cart"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />-->
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

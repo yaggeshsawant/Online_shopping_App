@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentPageNotFound">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start|center"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_page_not_found">
+
+        </ImageView>
+
+        <TextView
+            style="@style/PageNotFoundDesign"
+            android:text="@string/pageNotFound" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/pageNotFoundText"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.65">
+
+            </View>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/page_not_found_id"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="4"
+                android:background="@drawable/login_button_bk"
+                android:drawableStart="@drawable/home"
+                android:drawableTint="@color/white"
+                android:gravity="start|center"
+                android:paddingLeft="20dp"
+                android:text="Go To Home"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7">
+
+            </View>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/report_id"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="4"
+                android:background="@drawable/login_button_bk"
+                android:drawableTint="@color/white"
+                android:gravity="center"
+                android:text="Report Problem"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
