@@ -60,6 +60,8 @@ dependencies {
 
     implementation("androidx.paging:paging-runtime:3.1.0")
 
+    //for implementing the swipeRefersh functionality
+    implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
 
 

@@ -2,6 +2,7 @@ package com.madss.grocery;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.graphics.Paint;
 import android.os.Bundle;
 
@@ -32,11 +33,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class FragmentProductFullDetail extends Fragment {
+public class FragmentProductFullDetail extends Fragment  {
     private ViewPager viewPager;
     RecyclerView fullDetailRecyclerViewId;
     private AdapterForProductDetailSlider sliderAdapter;
     Button buyNowId;
+
+    private OnCartCountChangeListener cartCountChangeListener;
 
     ProgressDialog progressDialog;
     RetrofitApiInterface retrofitApiInterface = null;
@@ -58,7 +61,21 @@ public class FragmentProductFullDetail extends Fragment {
 
     CardView video_id;
 
+    DashBoardActivity dashBoardActivity;
+
     @SuppressLint("MissingInflatedId")
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            // Initialize the cartCountChangeListener
+            cartCountChangeListener = (OnCartCountChangeListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString()
+                    + " must implement OnCartCountChangeListener");
+        }
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -68,6 +85,10 @@ public class FragmentProductFullDetail extends Fragment {
         productId = bundle.getString("productId");
         initialization(view);
 
+
+
+
+
         FullDetailOfProduct(productId);
 
 
@@ -76,6 +97,7 @@ public class FragmentProductFullDetail extends Fragment {
             @Override
             public void onClick(View view) {
                 addToCart();
+                notifyCartCountChange();
             }
         });
 
@@ -83,6 +105,7 @@ public class FragmentProductFullDetail extends Fragment {
             @Override
             public void onClick(View view) {
                 decrementCount();
+                notifyCartCountChange();
             }
         });
 
@@ -90,6 +113,7 @@ public class FragmentProductFullDetail extends Fragment {
             @Override
             public void onClick(View view) {
                 incrementCount();
+                notifyCartCountChange();
             }
         });
 
@@ -116,6 +140,13 @@ public class FragmentProductFullDetail extends Fragment {
         }
 
         return view;
+    }
+
+    private void notifyCartCountChange() {
+
+            int newCount = db.getAllProducts().size();
+            cartCountChangeListener.onCartCountChange(newCount);
+
     }
 
     private void AdvertiseVideo() {
@@ -263,6 +294,7 @@ public class FragmentProductFullDetail extends Fragment {
         btnincrease = view.findViewById(R.id.btnincrease);
         count_linear_layout=view.findViewById(R.id.count_linear_layout);
         db= new DBhandler(getContext());
+        dashBoardActivity = (DashBoardActivity) getActivity();
 
         retrofitApiInterface = RetrofitApiClient.getApiClient(getActivity()).create(RetrofitApiInterface.class);
     }
@@ -294,4 +326,6 @@ public class FragmentProductFullDetail extends Fragment {
         fullDetailRecyclerViewId.setAdapter(adapter);
 
     }
+
+
 }

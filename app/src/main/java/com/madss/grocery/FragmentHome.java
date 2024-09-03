@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +42,7 @@ public class FragmentHome extends Fragment {
     private TextView newsTextView;
     RetrofitApiInterface retrofitApiInterface = null;
 
+    private SwipeRefreshLayout swipeRefreshLayout;
 
 
 
@@ -51,6 +53,28 @@ public class FragmentHome extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         this.view = view;
+
+        //Initialization of swipe refresh layout
+        swipeRefreshLayout=view.findViewById(R.id.swipe_layout_id);
+
+        //handle the refresh action
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                handlerFrontAdvertisementSlider();
+                handlenewproduct();
+                handlecategoryRecyclerViewId();
+                handleFrontCategoryRecyclerView();
+                handleSlider();
+                handleMarquee();
+
+                //stop the refreshing animation once data is loaded
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
+
+
+
         // handle all initialization
         initialization();
         // Handle marquee setup
